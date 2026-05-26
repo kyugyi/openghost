@@ -30,7 +30,7 @@ Pass any reference image and OpenGhost uses it as visual context, so every gener
 
 ### Option 1 — Download the prebuilt extension (recommended)
 
-1. Download the latest [`openghost-1.1.0.mcpb`](https://github.com/kyugyi/openghost/releases/latest) from Releases
+1. Download the latest [`openghost-1.1.0.mcpb`](https://github.com/kyugyi/openghost/releases/latest/download/openghost-1.1.0.mcpb) from Releases
 2. Double-click the file — Claude Desktop opens an installation dialog
 3. Enter your OpenAI API key (get one at [platform.openai.com/api-keys](https://platform.openai.com/api-keys))
 4. Done — the tools appear in any new Claude conversation
