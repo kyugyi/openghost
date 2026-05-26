@@ -1,0 +1,12 @@
+# Dependencies (contributors run `npm install`; they're bundled at pack time)
+node_modules/
+
+# Build artifacts
+*.mcpb
+
+# Scratch / OS
+tmp/
+*.log
+.DS_Store
+.vscode/
+.idea/

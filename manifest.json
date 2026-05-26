@@ -1,0 +1,117 @@
+{
+  "manifest_version": "0.3",
+  "name": "openghost",
+  "display_name": "OpenGhost",
+  "version": "1.1.0",
+  "description": "Image generation for Claude Desktop via OpenAI GPT Image 2 — with style consistency that sticks.",
+  "long_description": "**OpenGhost** brings OpenAI's GPT Image 2 directly into Claude Desktop, optimized for design workflows where visual consistency matters.\n\n## Why OpenGhost?\n\n- **Style that sticks** — pass any reference image and OpenGhost uses it as visual context, so every generated asset stays on-brand\n- **Smart cost defaults** — medium quality (~$0.053/img), 1024×1024 hard cap, 1 image per call, conservative retries\n- **Pricing transparent** — every response shows the approximate cost so you can audit your spend\n- **See your result** — optional auto-open pops the image in your default viewer\n- **Zero waste** — schema-enforced single-image generation, no surprise bulk billing\n\n## Tools\n\n- **`generate_image`** — from-scratch text-to-image\n- **`edit_image`** — generation with 1–16 reference images (style consistency, variations, inpainting)\n\nIdeal for designing icon sets, illustration libraries, mood boards, or any task where you need 10+ images to share a visual identity.\n\n---\n\nOpen source (MIT) · By [Ghostoli Production](https://github.com/ghostoli)",
+  "author": {
+    "name": "Ghostoli Production"
+  },
+  "homepage": "https://github.com/ghostoli/openghost",
+  "documentation": "https://github.com/ghostoli/openghost#readme",
+  "support": "https://github.com/ghostoli/openghost/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ghostoli/openghost.git"
+  },
+  "icon": "icon.png",
+  "keywords": [
+    "openai",
+    "gpt-image-2",
+    "image-generation",
+    "style-consistency",
+    "design-tools",
+    "claude-desktop",
+    "mcp"
+  ],
+  "license": "MIT",
+  "privacy_policies": [
+    "https://openai.com/policies/privacy-policy"
+  ],
+  "compatibility": {
+    "claude_desktop": ">=1.0.0",
+    "platforms": ["darwin", "win32", "linux"],
+    "runtimes": {
+      "node": ">=18.0.0"
+    }
+  },
+  "server": {
+    "type": "node",
+    "entry_point": "server/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": ["${__dirname}/server/index.js"],
+      "env": {
+        "OPENAI_API_KEY": "${user_config.api_key}",
+        "OPENGHOST_MODEL": "${user_config.model}",
+        "OPENGHOST_DEFAULT_QUALITY": "${user_config.default_quality}",
+        "OPENGHOST_OUTPUT_DIR": "${user_config.output_directory}",
+        "OPENGHOST_STYLE_REFERENCE": "${user_config.style_reference_image}",
+        "OPENGHOST_TIMEOUT_S": "${user_config.timeout_seconds}",
+        "OPENGHOST_AUTO_OPEN": "${user_config.auto_open_image}"
+      }
+    }
+  },
+  "tools": [
+    {
+      "name": "generate_image",
+      "description": "Generate an image from a text prompt (from scratch, no reference)."
+    },
+    {
+      "name": "edit_image",
+      "description": "Generate an image using 1–16 reference images for style consistency or inpainting."
+    }
+  ],
+  "user_config": {
+    "api_key": {
+      "type": "string",
+      "title": "OpenAI API Key",
+      "description": "Your OpenAI API key. Get one at https://platform.openai.com/api-keys . Stored securely in your OS keychain.",
+      "sensitive": true,
+      "required": true
+    },
+    "model": {
+      "type": "string",
+      "title": "Default model",
+      "description": "Image model. gpt-image-2 = flagship (best quality, ~$0.053/img medium). Cheaper options: gpt-image-1.5, gpt-image-1, gpt-image-1-mini (cheapest). NOTE: gpt-image-2 may require OpenAI organization verification — if it fails, verify your org at platform.openai.com/settings/organization/general or downgrade to gpt-image-1.",
+      "required": false,
+      "default": "gpt-image-2"
+    },
+    "default_quality": {
+      "type": "string",
+      "title": "Default quality",
+      "description": "Quality tier when not specified by the agent. low (~$0.006), medium (~$0.053, RECOMMENDED), high (~$0.211).",
+      "required": false,
+      "default": "medium"
+    },
+    "output_directory": {
+      "type": "directory",
+      "title": "Output directory",
+      "description": "Where generated images land when the agent doesn't specify an absolute path. Leave empty to use ~/openghost-images. Accepts ${HOME}/, $HOME/, or ~/ prefixes.",
+      "required": false
+    },
+    "style_reference_image": {
+      "type": "file",
+      "title": "Default style reference (optional)",
+      "description": "Optional canonical reference image. Useful for asset libraries — point this at a 'style anchor' PNG and OpenGhost can reuse it for visual consistency.",
+      "required": false
+    },
+    "timeout_seconds": {
+      "type": "number",
+      "title": "Request timeout (seconds)",
+      "description": "Maximum wait time for a single image. High quality at 1024×1024 can take 60–90s.",
+      "required": false,
+      "default": 180,
+      "min": 30,
+      "max": 600
+    },
+    "auto_open_image": {
+      "type": "boolean",
+      "title": "Auto-open generated images",
+      "description": "When ON, each generated image opens automatically in your default image viewer (e.g. Preview) so you can see it without opening the file yourself. Useful in the normal Claude chat, which doesn't show MCP images inline. Leave OFF if you generate many images at once (it would open many windows).",
+      "required": false,
+      "default": false
+    }
+  }
+}

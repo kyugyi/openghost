@@ -1,0 +1,10 @@
+# Dev-only — never ship in the .mcpb distributable
+tests/
+tmp/
+.git/
+.github/
+*.log
+*.mcpb
+.DS_Store
+.vscode/
+.idea/

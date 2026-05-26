@@ -1,0 +1,45 @@
+{
+  "name": "openghost-mcp",
+  "version": "1.1.0",
+  "description": "Image generation for Claude Desktop via OpenAI GPT Image 2 — with style consistency that sticks.",
+  "type": "module",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "test": "node --test tests/unit.test.js tests/integration.test.js",
+    "test:unit": "node --test tests/unit.test.js",
+    "test:integration": "node --test tests/integration.test.js",
+    "test:e2e": "node --test tests/integration.test.js",
+    "lint": "node --check server/index.js && echo 'Syntax OK'",
+    "build": "mcpb validate manifest.json && mcpb pack . openghost-$(node -p \"require('./package.json').version\").mcpb",
+    "clean": "rm -f *.mcpb"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ghostoli/openghost.git"
+  },
+  "keywords": [
+    "openai",
+    "gpt-image-2",
+    "image-generation",
+    "claude-desktop",
+    "mcp",
+    "mcpb",
+    "design-tools",
+    "style-consistency"
+  ],
+  "author": "Ghostoli Production",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ghostoli/openghost/issues"
+  },
+  "homepage": "https://github.com/ghostoli/openghost#readme",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "openai": "^5.0.0",
+    "pngjs": "^7.0.0"
+  }
+}
