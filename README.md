@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="icon.png" width="160" alt="OpenGhost logo" />
+
 # 👻 OpenGhost
 
 **Image generation for Claude Desktop, powered by OpenAI's GPT Image 2 — with style consistency that sticks.**
