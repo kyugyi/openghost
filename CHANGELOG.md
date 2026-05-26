@@ -100,6 +100,6 @@ The format follows [Keep a Changelog](https://keepachangelog.com/), and the proj
 - **1.0.0** — Initial release: `generate_image` + `edit_image` over MCP, OpenAI GPT Image 2, cost
   guardrails (n=1, 1024² cap, medium default), API key in the OS keychain.
 
-[1.1.0]: https://github.com/ghostoli/openghost/releases/tag/v1.1.0
-[1.0.9]: https://github.com/ghostoli/openghost/releases/tag/v1.0.9
-[1.0.8]: https://github.com/ghostoli/openghost/releases/tag/v1.0.8
+[1.1.0]: https://github.com/kyugyi/openghost/releases/tag/v1.1.0
+[1.0.9]: https://github.com/kyugyi/openghost/releases/tag/v1.0.9
+[1.0.8]: https://github.com/kyugyi/openghost/releases/tag/v1.0.8

@@ -4,16 +4,16 @@
   "display_name": "OpenGhost",
   "version": "1.1.0",
   "description": "Image generation for Claude Desktop via OpenAI GPT Image 2 — with style consistency that sticks.",
-  "long_description": "**OpenGhost** brings OpenAI's GPT Image 2 directly into Claude Desktop, optimized for design workflows where visual consistency matters.\n\n## Why OpenGhost?\n\n- **Style that sticks** — pass any reference image and OpenGhost uses it as visual context, so every generated asset stays on-brand\n- **Smart cost defaults** — medium quality (~$0.053/img), 1024×1024 hard cap, 1 image per call, conservative retries\n- **Pricing transparent** — every response shows the approximate cost so you can audit your spend\n- **See your result** — optional auto-open pops the image in your default viewer\n- **Zero waste** — schema-enforced single-image generation, no surprise bulk billing\n\n## Tools\n\n- **`generate_image`** — from-scratch text-to-image\n- **`edit_image`** — generation with 1–16 reference images (style consistency, variations, inpainting)\n\nIdeal for designing icon sets, illustration libraries, mood boards, or any task where you need 10+ images to share a visual identity.\n\n---\n\nOpen source (MIT) · By [Ghostoli Production](https://github.com/ghostoli)",
+  "long_description": "**OpenGhost** brings OpenAI's GPT Image 2 directly into Claude Desktop, optimized for design workflows where visual consistency matters.\n\n## Why OpenGhost?\n\n- **Style that sticks** — pass any reference image and OpenGhost uses it as visual context, so every generated asset stays on-brand\n- **Smart cost defaults** — medium quality (~$0.053/img), 1024×1024 hard cap, 1 image per call, conservative retries\n- **Pricing transparent** — every response shows the approximate cost so you can audit your spend\n- **See your result** — optional auto-open pops the image in your default viewer\n- **Zero waste** — schema-enforced single-image generation, no surprise bulk billing\n\n## Tools\n\n- **`generate_image`** — from-scratch text-to-image\n- **`edit_image`** — generation with 1–16 reference images (style consistency, variations, inpainting)\n\nIdeal for designing icon sets, illustration libraries, mood boards, or any task where you need 10+ images to share a visual identity.\n\n---\n\nOpen source (MIT) · By [Ghostoli Production](https://github.com/kyugyi)",
   "author": {
     "name": "Ghostoli Production"
   },
-  "homepage": "https://github.com/ghostoli/openghost",
-  "documentation": "https://github.com/ghostoli/openghost#readme",
-  "support": "https://github.com/ghostoli/openghost/issues",
+  "homepage": "https://github.com/kyugyi/openghost",
+  "documentation": "https://github.com/kyugyi/openghost#readme",
+  "support": "https://github.com/kyugyi/openghost/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ghostoli/openghost.git"
+    "url": "https://github.com/kyugyi/openghost.git"
   },
   "icon": "icon.png",
   "keywords": [

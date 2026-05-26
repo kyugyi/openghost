@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ghostoli/openghost.git"
+    "url": "git+https://github.com/kyugyi/openghost.git"
   },
   "keywords": [
     "openai",
@@ -34,9 +34,9 @@
   "author": "Ghostoli Production",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ghostoli/openghost/issues"
+    "url": "https://github.com/kyugyi/openghost/issues"
   },
-  "homepage": "https://github.com/ghostoli/openghost#readme",
+  "homepage": "https://github.com/kyugyi/openghost#readme",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.4",
     "openai": "^5.0.0",

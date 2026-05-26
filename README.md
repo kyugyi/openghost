@@ -7,7 +7,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Node.js](https://img.shields.io/badge/node-%3E%3D18-brightgreen.svg)](https://nodejs.org/)
 [![MCPB v0.3](https://img.shields.io/badge/MCPB-v0.3-purple.svg)](https://github.com/modelcontextprotocol/mcpb)
-[![Made by Ghostoli](https://img.shields.io/badge/by-Ghostoli%20Production-0033CC.svg)](https://github.com/ghostoli)
+[![Made by Ghostoli](https://img.shields.io/badge/by-Ghostoli%20Production-0033CC.svg)](https://github.com/kyugyi)
 
 </div>
 
@@ -30,7 +30,7 @@ Pass any reference image and OpenGhost uses it as visual context, so every gener
 
 ### Option 1 — Download the prebuilt extension (recommended)
 
-1. Download the latest [`openghost-1.1.0.mcpb`](https://github.com/ghostoli/openghost/releases/latest) from Releases
+1. Download the latest [`openghost-1.1.0.mcpb`](https://github.com/kyugyi/openghost/releases/latest) from Releases
 2. Double-click the file — Claude Desktop opens an installation dialog
 3. Enter your OpenAI API key (get one at [platform.openai.com/api-keys](https://platform.openai.com/api-keys))
 4. Done — the tools appear in any new Claude conversation
@@ -38,7 +38,7 @@ Pass any reference image and OpenGhost uses it as visual context, so every gener
 ### Option 2 — Build from source
 
 ```bash
-git clone https://github.com/ghostoli/openghost.git
+git clone https://github.com/kyugyi/openghost.git
 cd openghost
 npm install
 npm install -g @anthropic-ai/mcpb
@@ -215,6 +215,6 @@ MIT — see [LICENSE](LICENSE).
 
 <div align="center">
 
-Made with 👻 by [Ghostoli Production](https://github.com/ghostoli)
+Made with 👻 by [Ghostoli Production](https://github.com/kyugyi)
 
 </div>
